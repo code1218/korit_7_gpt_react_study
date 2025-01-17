@@ -35,10 +35,9 @@ function App10(props) {
 
     const handleOnClick = () => {
         setNum1(num1 + 10);
-        
-        
     }
 
+    console.log("???????");
 
     return (
         <div>
