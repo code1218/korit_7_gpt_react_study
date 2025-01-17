@@ -37,7 +37,10 @@ function App13(props) {
     }
 
     const generateToken2 = async (user) => {
-        
+        if(!user) {
+            throw new Error("토큰 생성 실패!");
+        }
+        return "새로만든 토큰!";
     }
 
     const [ username, setUsername ] = useState("");
@@ -76,7 +79,7 @@ function App13(props) {
         try {
             const result = await getUser(username);
             console.log(result);
-            const token = await generateToken(result);
+            const token = await generateToken2(result);
             console.log(token);
         } catch(error) {
             console.error(error);
